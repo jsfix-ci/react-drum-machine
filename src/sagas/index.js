@@ -134,7 +134,7 @@ export function *stop() {
 
 export function *seek() {
 	while (true) {
-		const { payload : time } = yield take('CHANGE_TIME');
+		const { payload: time } = yield take('CHANGE_TIME');
 		const currentTime = yield call(getWebAudioTime);
 		lastDiv = -1;
 		const status = yield select(getStatus);
